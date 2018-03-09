@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Movies</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="searchbar">
+            <form>
+                <select name="prop" id="prop">
+                    <option value="title">Filmcím</option>
+                    <option value="actor">Szereplő</option>
+                    <option value="director">Rendező</option>
+                </select>
+                <input type="text" placeholder="search a movie" id="find">
+                <button type="button" id="search">Search</button>
+            </form>
+            <button type="button" id="news">Csak az 1990 utáni filmekre vagyok kiváncsi!</button>
+            <button type="button" id="statisztika">Lássam azokat a statisztikákat!</button>
+            <div class="stats"></div>
+        </div>
+        <div class="content"></div>
+    </div>
+    <script src="/js/movies.js"></script>
+</body>
+
+</html>
