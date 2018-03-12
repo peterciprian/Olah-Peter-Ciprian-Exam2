@@ -223,7 +223,8 @@ function search(data) {
     switch (prop) {
         case 'title':
             for (let i in data) {
-                if (data[i].title == value) {
+                let test_regexp = new RegExp(value, "ig");
+                if (test_regexp.test(data[i].title)) {
                     eredmeny.push(data[i])
                 }
             }
@@ -231,7 +232,8 @@ function search(data) {
         case 'actor':
             for (let i in data) {
                 for (let j in data[i].cast) {
-                    if (data[i].cast[j].name == value) {
+                    let test_regexp = new RegExp(value, "ig");
+                    if (test_regexp.test(data[i].cast[j].name)) {
                         eredmeny.push(data[i])
                     }
                 }
@@ -240,7 +242,8 @@ function search(data) {
         case 'director':
             for (let i in data) {
                 for (let j in data[i].directors) {
-                    if (data[i].directors[j] == value) {
+                    let test_regexp = new RegExp(value, "ig");
+                    if (test_regexp.test(data[i].directors[j])) {
                         eredmeny.push(data[i])
                     }
                 }
